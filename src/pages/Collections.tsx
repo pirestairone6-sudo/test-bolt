@@ -98,17 +98,7 @@ const Collections = () => {
             </h2>
           </div>
           
-          {/* Collections Introduction */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-8 hero-text">
-            Our Core Collections
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-16 leading-relaxed">
-            At Cutekiddo, our core collections unite everyday essentials with adaptive apparel designed to care for babies with and without medical needs.
-          </p>
-        </div>
-        
+     
       </section>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -130,6 +120,17 @@ const Collections = () => {
         </div>
       </section>
 
+            {/* Collections Introduction */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-display font-bold mb-8 hero-text">
+            Our Core Collections
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-16 leading-relaxed">
+            At Cutekiddo, our core collections unite everyday essentials with adaptive apparel designed to care for babies with and without medical needs.
+          </p>
+        </div>
+        
       {/* Collections Display */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
