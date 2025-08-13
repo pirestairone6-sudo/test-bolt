@@ -1,7 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Heart, ShoppingBag, User } from 'lucide-react';
+import { Menu, X, Instagram, PlayCircle, Youtube } from 'lucide-react';
+
+const SocialButton = ({ icon: Icon, label, href, countTarget }: { 
+  icon: any; 
+  label: string; 
+  href: string; 
+  countTarget: number; 
+}) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const increment = Math.ceil(countTarget / 100);
+    const interval = setInterval(() => {
+      setCount(prev => {
+        if (prev >= countTarget) {
+          clearInterval(interval);
+          return countTarget;
+        }
+        return Math.min(prev + increment + Math.floor(Math.random() * 3), countTarget);
+      });
+    }, 50 + Math.random() * 100);
+
+    return () => clearInterval(interval);
+  }, [countTarget]);
+
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="group">
+      <Button variant="ghost" size="sm" className="relative group-hover:bg-primary/10 transition-all duration-300">
+        <Icon className="h-5 w-5 transition-transform group-hover:scale-110" />
+        <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
+          {count >= 99 ? '99+' : count}
+        </span>
+      </Button>
+    </a>
+  );
+};
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +53,9 @@ const Navigation = () => {
 
   const navigationItems = [
     { name: 'Our Mission', href: '/about' },
-    { name: 'Product Preview', href: '/collections' },
-    { name: 'FAQs', href: '/contact' },
-    { name: 'Join the Launch', href: '/contact' }
+    { name: 'Collections', href: '/collections' },
+    { name: 'FAQs', href: '/faq' },
+    { name: 'Join the Launch', href: '#join' }
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -65,23 +100,26 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Action Buttons */}
+          {/* Social Media Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="relative group">
-              <Heart className="h-5 w-5 transition-transform group-hover:scale-110" />
-              <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                2
-              </span>
-            </Button>
-            <Button variant="ghost" size="sm" className="relative group">
-              <ShoppingBag className="h-5 w-5 transition-transform group-hover:scale-110" />
-              <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                3
-              </span>
-            </Button>
-            <Button variant="ghost" size="sm" className="group">
-              <User className="h-5 w-5 transition-transform group-hover:scale-110" />
-            </Button>
+            <SocialButton 
+              icon={Instagram} 
+              label="Instagram" 
+              href="https://instagram.com/cutekiddo" 
+              countTarget={10} 
+            />
+            <SocialButton 
+              icon={PlayCircle} 
+              label="TikTok" 
+              href="https://tiktok.com/@cutekiddo" 
+              countTarget={8} 
+            />
+            <SocialButton 
+              icon={Youtube} 
+              label="YouTube" 
+              href="https://youtube.com/@cutekiddo" 
+              countTarget={99} 
+            />
           </div>
 
           {/* Mobile Menu Button */}
@@ -114,21 +152,24 @@ const Navigation = () => {
                 </NavLink>
               ))}
               <div className="flex items-center justify-center space-x-4 pt-4 border-t border-border/50">
-                <Button variant="ghost" size="sm" className="relative">
-                  <Heart className="h-5 w-5" />
-                  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    2
-                  </span>
-                </Button>
-                <Button variant="ghost" size="sm" className="relative">
-                  <ShoppingBag className="h-5 w-5" />
-                  <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    3
-                  </span>
-                </Button>
-                <Button variant="ghost" size="sm">
-                  <User className="h-5 w-5" />
-                </Button>
+                <SocialButton 
+                  icon={Instagram} 
+                  label="Instagram" 
+                  href="https://instagram.com/cutekiddo" 
+                  countTarget={10} 
+                />
+                <SocialButton 
+                  icon={PlayCircle} 
+                  label="TikTok" 
+                  href="https://tiktok.com/@cutekiddo" 
+                  countTarget={8} 
+                />
+                <SocialButton 
+                  icon={Youtube} 
+                  label="YouTube" 
+                  href="https://youtube.com/@cutekiddo" 
+                  countTarget={99} 
+                />
               </div>
             </div>
           </div>
