@@ -55,7 +55,7 @@ const Navigation = () => {
     { name: 'Our Mission', href: '/about' },
     { name: 'Collections', href: '/collections' },
     { name: 'FAQs', href: '/faq' },
-    { name: 'Join the Launch', href: '#join' }
+    { name: 'Join the Launch', href: '/join-launch' }
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -105,19 +105,19 @@ const Navigation = () => {
             <SocialButton 
               icon={Instagram} 
               label="Instagram" 
-              href="https://instagram.com/cutekiddo" 
+              href="https://www.instagram.com/cutekiddo_ca/" 
               countTarget={10} 
             />
             <SocialButton 
               icon={PlayCircle} 
               label="TikTok" 
-              href="https://tiktok.com/@cutekiddo" 
+              href="https://tiktok.com/@cutekiddo_ca" 
               countTarget={8} 
             />
             <SocialButton 
               icon={Youtube} 
               label="YouTube" 
-              href="https://youtube.com/@cutekiddo" 
+              href="https://www.youtube.com/@Cutekiddo_ca" 
               countTarget={99} 
             />
           </div>
@@ -155,19 +155,19 @@ const Navigation = () => {
                 <SocialButton 
                   icon={Instagram} 
                   label="Instagram" 
-                  href="https://instagram.com/cutekiddo" 
+                  href="https://www.instagram.com/cutekiddo_ca/" 
                   countTarget={10} 
                 />
                 <SocialButton 
                   icon={PlayCircle} 
                   label="TikTok" 
-                  href="https://tiktok.com/@cutekiddo" 
+                  href="https://tiktok.com/@cutekiddo_ca" 
                   countTarget={8} 
                 />
                 <SocialButton 
                   icon={Youtube} 
                   label="YouTube" 
-                  href="https://youtube.com/@cutekiddo" 
+                  href="https://www.youtube.com/@Cutekiddo_ca" 
                   countTarget={99} 
                 />
               </div>
