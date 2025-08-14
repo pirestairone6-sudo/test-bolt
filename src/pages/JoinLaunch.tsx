@@ -12,7 +12,7 @@ const JoinLaunch = () => {
     { name: 'Instagram', icon: Instagram, color: 'hover:text-pink-500', href: 'https://www.instagram.com/cutekiddo_ca/' },
     { name: 'Facebook', icon: Facebook, color: 'hover:text-blue-600', href: 'https://www.facebook.com/profile.php?id=61573646977130' },
     { name: 'WhatsApp', icon: MessageCircle, color: 'hover:text-green-500', href: '#' },
-    { name: 'YouTube', icon: Youtube, color: 'hover:text-red-500', href: 'https://www.youtube.com/@Cutekiddo_ca' },
+    { name: 'YouTube', icon: Youtube, color: 'hover:text-red-500', href: 'https://www.youtube.com/channel/UC-zSidV6JrIQSQYOEfTwqPA' },
     { name: 'TikTok', icon: Music, color: 'hover:text-black', href: 'https://tiktok.com/@cutekiddo_ca' },
     { name: 'X (Twitter)', icon: Twitter, color: 'hover:text-blue-400', href: 'https://x.com/Cutekiddo_ca' },
     { name: 'Pinterest', icon: Image, color: 'hover:text-red-600', href: 'https://www.pinterest.com/Cutekiddo_ca' }
