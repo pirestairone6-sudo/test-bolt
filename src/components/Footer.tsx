@@ -23,18 +23,26 @@ const Footer = () => {
               Thoughtfully designed inclusive clothing that brings comfort, confidence, and joy to children with medical needs and their families. Made with love in Canada.
             </p>
             <div className="flex justify-center space-x-4">
-              <Button variant="ghost" size="sm" className="hover:bg-primary/10">
-                <Instagram className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="sm" className="hover:bg-primary/10">
-                <Facebook className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="sm" className="hover:bg-primary/10">
-                <Twitter className="h-5 w-5" />
-              </Button>
-              <Button variant="ghost" size="sm" className="hover:bg-primary/10">
-                <Youtube className="h-5 w-5" />
-              </Button>
+              <a href="https://www.instagram.com/cutekiddo_ca/" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="sm" className="hover:bg-primary/10">
+                  <Instagram className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61573646977130" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="sm" className="hover:bg-primary/10">
+                  <Facebook className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://x.com/Cutekiddo_ca" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="sm" className="hover:bg-primary/10">
+                  <Twitter className="h-5 w-5" />
+                </Button>
+              </a>
+              <a href="https://www.youtube.com/@Cutekiddo_ca" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="sm" className="hover:bg-primary/10">
+                  <Youtube className="h-5 w-5" />
+                </Button>
+              </a>
             </div>
           </div>
 
