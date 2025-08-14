@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Instagram, PlayCircle, Youtube } from 'lucide-react';
@@ -58,6 +58,10 @@ const Navigation = () => {
     { name: 'Join the Launch', href: '/join-launch' }
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const isActive = (href: string) => location.pathname === href;
 
   return (
@@ -89,6 +93,7 @@ const Navigation = () => {
               <NavLink
                 key={item.name}
                 to={item.href}
+                onClick={scrollToTop}
                 className={`nav-highlight px-3 py-2 text-sm font-medium tracking-wide transition-all duration-300 ${
                   isActive(item.href) 
                     ? 'text-primary font-semibold active' 
@@ -117,7 +122,7 @@ const Navigation = () => {
             <SocialButton 
               icon={Youtube} 
               label="YouTube" 
-              href="https://www.youtube.com/channel/UC-zSidV6JrIQSQYOEfTwqPA"
+              href="https://www.youtube.com/channel/UC-zSidV6JrIQSQYOEfTwqPA" 
               countTarget={99} 
             />
           </div>
@@ -146,7 +151,10 @@ const Navigation = () => {
                       ? 'bg-primary/10 text-primary font-semibold'
                       : 'text-foreground hover:bg-muted hover:text-primary'
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    scrollToTop();
+                  }}
                 >
                   {item.name}
                 </NavLink>
@@ -167,7 +175,7 @@ const Navigation = () => {
                 <SocialButton 
                   icon={Youtube} 
                   label="YouTube" 
-                   href="https://www.youtube.com/channel/UC-zSidV6JrIQSQYOEfTwqPA"
+                  href="https://www.youtube.com/channel/UC-zSidV6JrIQSQYOEfTwqPA" 
                   countTarget={99} 
                 />
               </div>
