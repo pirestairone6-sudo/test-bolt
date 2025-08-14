@@ -38,7 +38,7 @@ const Footer = () => {
                   <Twitter className="h-5 w-5" />
                 </Button>
               </a>
-              <a href="https://www.youtube.com/@Cutekiddo_ca" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/channel/UC-zSidV6JrIQSQYOEfTwqPA" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="sm" className="hover:bg-primary/10">
                   <Youtube className="h-5 w-5" />
                 </Button>
