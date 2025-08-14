@@ -13,7 +13,7 @@ const HeroSection = () => {
           alt="Luxury baby fashion"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-background/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/40 to-background/10"></div>
       </div>
 
       {/* Content */}
@@ -22,7 +22,7 @@ const HeroSection = () => {
           <div className="max-w-4xl mx-auto">
             {/* Text Background Enhancement */}
             <div className="relative">
-              <div className="absolute inset-0 bg-background/35 backdrop-blur-sm rounded-3xl transform -rotate-1 opacity-70"></div>
+              <div className="absolute inset-0 bg-background/25 backdrop-blur-sm rounded-3xl transform -rotate-1 opacity-60"></div>
               <div className="relative px-8 py-12 lg:px-16 lg:py-20">
                 {/* Badge */}
                 <div className="inline-flex items-center space-x-2 bg-card/90 backdrop-blur-sm px-6 py-3 rounded-full mb-12 luxury-card elegant-fade-in">
