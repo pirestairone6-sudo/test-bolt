@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowRight, Mail } from 'lucide-react';
@@ -8,19 +8,30 @@ const EmailCaptureSection = () => {
   const [email, setEmail] = useState('');
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
-      toast({
-        title: "Thank you!",
-        description: "You'll be the first to know when we launch.",
-      });
-      setEmail('');
+      try {
+        // Simulate API call - replace with actual mailing list integration
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        toast({
+          title: "Welcome to the movement! 🎉",
+          description: "You'll be the first to know when we launch with exclusive early access.",
+        });
+        setEmail('');
+      } catch (error) {
+        toast({
+          title: "Oops!",
+          description: "Something went wrong. Please try again.",
+          variant: "destructive"
+        });
+      }
     }
   };
 
   return (
-    <section className="py-24 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
+    <section id="join" className="py-24 bg-gradient-to-br from-primary/10 via-background to-secondary/10">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="luxury-card p-8 lg:p-16">
           <div className="mb-8">
