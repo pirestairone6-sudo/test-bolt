@@ -1,10 +1,10 @@
-import { forwardRef } from "react"
+import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight, MoreHorizontal } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-const Breadcrumb = forwardRef<
+const Breadcrumb = React.forwardRef<
   HTMLElement,
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
@@ -12,7 +12,7 @@ const Breadcrumb = forwardRef<
 >(({ ...props }, ref) => <nav ref={ref} aria-label="breadcrumb" {...props} />)
 Breadcrumb.displayName = "Breadcrumb"
 
-const BreadcrumbList = forwardRef<
+const BreadcrumbList = React.forwardRef<
   HTMLOListElement,
   React.ComponentPropsWithoutRef<"ol">
 >(({ className, ...props }, ref) => (
@@ -27,7 +27,7 @@ const BreadcrumbList = forwardRef<
 ))
 BreadcrumbList.displayName = "BreadcrumbList"
 
-const BreadcrumbItem = forwardRef<
+const BreadcrumbItem = React.forwardRef<
   HTMLLIElement,
   React.ComponentPropsWithoutRef<"li">
 >(({ className, ...props }, ref) => (
@@ -39,7 +39,7 @@ const BreadcrumbItem = forwardRef<
 ))
 BreadcrumbItem.displayName = "BreadcrumbItem"
 
-const BreadcrumbLink = forwardRef<
+const BreadcrumbLink = React.forwardRef<
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<"a"> & {
     asChild?: boolean
@@ -57,7 +57,7 @@ const BreadcrumbLink = forwardRef<
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
 
-const BreadcrumbPage = forwardRef<
+const BreadcrumbPage = React.forwardRef<
   HTMLSpanElement,
   React.ComponentPropsWithoutRef<"span">
 >(({ className, ...props }, ref) => (
@@ -76,7 +76,7 @@ const BreadcrumbSeparator = ({
   children,
   className,
   ...props
-}: ComponentProps<"li">) => (
+}: React.ComponentProps<"li">) => (
   <li
     role="presentation"
     aria-hidden="true"
@@ -91,7 +91,7 @@ BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
 const BreadcrumbEllipsis = ({
   className,
   ...props
-}: ComponentProps<"span">) => (
+}: React.ComponentProps<"span">) => (
   <span
     role="presentation"
     aria-hidden="true"
