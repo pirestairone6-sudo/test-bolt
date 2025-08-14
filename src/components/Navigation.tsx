@@ -117,7 +117,7 @@ const Navigation = () => {
             <SocialButton 
               icon={Youtube} 
               label="YouTube" 
-              href="https://www.youtube.com/@Cutekiddo_ca" 
+              href="https://www.youtube.com/channel/UC-zSidV6JrIQSQYOEfTwqPA"
               countTarget={99} 
             />
           </div>
@@ -167,7 +167,7 @@ const Navigation = () => {
                 <SocialButton 
                   icon={Youtube} 
                   label="YouTube" 
-                  href="https://www.youtube.com/@Cutekiddo_ca" 
+                   href="https://www.youtube.com/channel/UC-zSidV6JrIQSQYOEfTwqPA"
                   countTarget={99} 
                 />
               </div>
