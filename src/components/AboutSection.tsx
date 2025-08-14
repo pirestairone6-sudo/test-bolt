@@ -1,3 +1,5 @@
+
+import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Award, Leaf, Heart, Shield } from 'lucide-react';
 
